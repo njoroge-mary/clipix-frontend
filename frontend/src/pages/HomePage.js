@@ -57,11 +57,11 @@ const HomePage = () => {
             Professional results without the complexity.
           </p>
           <div className="flex gap-4 justify-center">
-            <Button size="lg" onClick={() => navigate('/dashboard')} data-testid="cta-start-editing">
+            <Button size="lg" onClick={() => navigate('/editor')} data-testid="cta-start-editing">
               Start Editing Now
             </Button>
-            <Button size="lg" variant="outline" data-testid="cta-learn-more">
-              Learn More
+            <Button size="lg" variant="outline" onClick={() => navigate('/dashboard')} data-testid="cta-learn-more">
+              View Dashboard
             </Button>
           </div>
         </div>
