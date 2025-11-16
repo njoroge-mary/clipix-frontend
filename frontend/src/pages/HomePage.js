@@ -40,8 +40,8 @@ const HomePage = () => {
             <h1 className="text-2xl font-bold">Clipix</h1>
             <Badge variant="secondary">Beta</Badge>
           </div>
-          <Button onClick={() => navigate('/dashboard')} data-testid="get-started-btn">
-            Get Started
+          <Button onClick={() => navigate('/editor')} data-testid="get-started-btn">
+            Start Editing
           </Button>
         </div>
       </header>
