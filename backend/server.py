@@ -55,7 +55,7 @@ db = None
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Lifespan context manager for startup and shutdown events"""
-    global client, db
+    global client, db, caption_generator
     
     # Startup
     try:
@@ -66,8 +66,13 @@ async def lifespan(app: FastAPI):
         # Test the connection
         await client.admin.command('ping')
         logger.info("Successfully connected to MongoDB")
+        
+        # Initialize caption generator
+        caption_generator = CaptionGenerator()
+        logger.info("Caption generator initialized")
+        
     except Exception as e:
-        logger.error(f"Failed to connect to MongoDB: {e}")
+        logger.error(f"Failed to initialize services: {e}")
         raise
     
     yield
