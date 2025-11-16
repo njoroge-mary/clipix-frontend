@@ -50,11 +50,11 @@ const HomePage = () => {
       <section className="container mx-auto px-4 py-20">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-5xl font-bold mb-6" data-testid="hero-title">
-            Video Editing Made Simple
+            AI-Powered Video Editing
           </h2>
           <p className="text-xl text-muted-foreground mb-8" data-testid="hero-description">
-            Create stunning videos with our powerful yet easy-to-use video editing platform.
-            Professional results without the complexity.
+            Transform your videos with AI-powered editing tools. Trim, cut, merge videos and generate
+            captions automatically in 50+ languages. Professional video editing made effortless.
           </p>
           <div className="flex gap-4 justify-center">
             <Button size="lg" onClick={() => navigate('/editor')} data-testid="cta-start-editing">
