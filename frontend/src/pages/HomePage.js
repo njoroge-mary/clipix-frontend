@@ -101,10 +101,10 @@ const HomePage = () => {
             <Button 
               size="lg" 
               variant="secondary" 
-              onClick={() => navigate('/dashboard')}
+              onClick={() => navigate('/editor')}
               data-testid="cta-get-started-bottom"
             >
-              Get Started Free
+              Launch Video Editor
             </Button>
           </CardContent>
         </Card>
