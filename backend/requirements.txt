@@ -18,3 +18,7 @@ flake8>=7.0.0
 
 # Utilities
 python-multipart>=0.0.9
+ffmpeg-python>=0.2.0
+
+# AI Video Editing
+emergentintegrations>=0.1.0
