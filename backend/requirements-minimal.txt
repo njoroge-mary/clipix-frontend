@@ -1,0 +1,22 @@
+# Minimal requirements for Clipix Backend deployment
+# Use this if the full requirements.txt causes issues
+
+# Core Framework
+fastapi==0.110.1
+uvicorn==0.25.0
+python-dotenv==1.2.1
+pydantic==2.12.4
+
+# Database
+motor==3.3.1
+pymongo==4.5.0
+
+# Video Processing
+ffmpeg-python==0.2.0
+
+# File Upload
+python-multipart==0.0.20
+
+# AI Integration (Emergent LLM Key)
+emergentintegrations==0.1.0
+openai==1.99.9
