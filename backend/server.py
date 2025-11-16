@@ -23,6 +23,15 @@ from caption_generator import CaptionGenerator
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
 
+# Initialize video processing
+UPLOAD_DIR = ROOT_DIR / 'uploads'
+UPLOAD_DIR.mkdir(exist_ok=True)
+video_processor = VideoProcessor(str(UPLOAD_DIR))
+caption_generator = CaptionGenerator()
+
+# Store processing jobs in memory (in production, use Redis or DB)
+processing_jobs: Dict[str, Dict[str, Any]] = {}
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
