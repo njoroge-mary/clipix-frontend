@@ -27,7 +27,9 @@ load_dotenv(ROOT_DIR / '.env')
 UPLOAD_DIR = ROOT_DIR / 'uploads'
 UPLOAD_DIR.mkdir(exist_ok=True)
 video_processor = VideoProcessor(str(UPLOAD_DIR))
-caption_generator = CaptionGenerator()
+
+# Caption generator will be initialized after environment is loaded
+caption_generator = None
 
 # Store processing jobs in memory (in production, use Redis or DB)
 processing_jobs: Dict[str, Dict[str, Any]] = {}
