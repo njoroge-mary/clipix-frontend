@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide Emergent branding badge */
+[href*="emergent"],
+[class*="emergent"],
+img[alt*="emergent" i],
+a[title*="emergent" i],
+div:has(> a[href*="emergent"]),
+button:has(> a[href*="emergent"]) {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
 body {
     margin: 0;
     font-family:
